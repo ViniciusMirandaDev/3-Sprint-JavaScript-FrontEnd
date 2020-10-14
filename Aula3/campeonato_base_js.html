@@ -59,15 +59,6 @@
             derrotas:7,
             golsproprio:50,
             golscontra:33
-        }, {
-            //Parte 3
-            nome: "Wolves",
-            vitorias: 12,
-            empates: 8,
-            derrotas:10,
-            golsproprio:38,
-            golscontra:36
-
         }];
 
         // Parte 1 - Lista somente os times cujas vitórias seja maior ou igual que 20
@@ -83,6 +74,16 @@
         let nomeTimes = times.map(time => time.nome);
         console.log(nomeTimes);
 
+        //Parte 3 - Adicionar wolves
+        times.push({
+            nome: "Wolves",
+            vitorias: 12,
+            empates: 8,
+            derrotas: 10,
+            golsproprio: 38,
+            golscontra: 36
+        });
+
         //Parte 4 -  Mostre o nome e a quantidade de jogos(vitorias, empates e derrotas), quantidade de vitorias, empates e derrotas de um time
         console.log('Resolução Parte 4')
         let nomeJogos = times.map(time => {
@@ -91,7 +92,8 @@
                 quantidadeJogos: time.derrotas + time.empates + time.vitorias,
                 vitorias: time.vitorias,
                 empates: time.empates,
-                derrotas: time.derrotas
+                derrotas: time.derrotas,
+                saldoGols: time.golsproprio - time.golscontra
             }
         });
         console.log(nomeJogos);

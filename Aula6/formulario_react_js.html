@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Info User</title>
+
+    <style>
+      body {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 200px;
+      }
+      .user-info {
+        margin-left: 10px;
+      }
+      .user-label {
+        margin-left: 10px;
+      }
+  </style>
+
+  </head>
+  <body>
+
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js" integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA==" crossorigin="anonymous"></script>
+
+    <script type="text/babel">
+      
+      ReactDOM.render(
+                
+                <form>
+                    <h1 class>Informações usuário</h1>
+                    <label class="user-label">
+                        Nome:
+                        <input type="text" class="user-info" name="nome" />
+                    </label>
+                    <label class="user-label">
+                        Número:
+                        <input type="text" class="user-info" name="numero" />
+                    </label>
+                    <label class="user-label">
+                        E-mail:
+                        <input type="text" class="user-info" name="email" />
+                    </label>
+                  <input type="submit" value="Enviar" />
+                </form>,
+        document.querySelector("#root")
+
+      );
+    </script>
+
+  </body>
+
+</html>
